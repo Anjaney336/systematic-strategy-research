@@ -1,0 +1,178 @@
+{
+  "dataset": "synthetic",
+  "source": {
+    "name": "Seeded correlated geometric paths; assumed distribution",
+    "link": "https://github.com/Anjaney336/systematic-strategy-research/blob/main/run.py",
+    "access_date": "2026-10-24",
+    "seed": 20261024
+  },
+  "symbols": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "start": "505",
+  "end": "1799",
+  "strategy": {
+    "observations": 1295,
+    "total_return": 0.061659301115671195,
+    "cagr": 0.011711236338192599,
+    "sharpe_zero_rf": 0.15999244654554476,
+    "max_drawdown": -0.2568161076299451
+  },
+  "benchmark": {
+    "observations": 1295,
+    "total_return": 0.4492909859829195,
+    "cagr": 0.0748800612569045,
+    "sharpe_zero_rf": 0.4835141656758799,
+    "max_drawdown": -0.4019959799336168
+  },
+  "paired_block_bootstrap": {
+    "annualized_mean_difference": -0.07133046817958921,
+    "lower_95": -0.1856740592266984,
+    "upper_95": 0.034531125730214114,
+    "block_length": 20,
+    "resamples": 1000,
+    "conditional_on_selected_path": true
+  },
+  "folds": [
+    {
+      "start": 505,
+      "stop": 631,
+      "mode": "reversion",
+      "lookback": 63,
+      "training_sharpe": -0.43340027695118005
+    },
+    {
+      "start": 631,
+      "stop": 757,
+      "mode": "reversion",
+      "lookback": 126,
+      "training_sharpe": -0.16462643290871704
+    },
+    {
+      "start": 757,
+      "stop": 883,
+      "mode": "reversion",
+      "lookback": 126,
+      "training_sharpe": -0.10676230913449133
+    },
+    {
+      "start": 883,
+      "stop": 1009,
+      "mode": "reversion",
+      "lookback": 126,
+      "training_sharpe": 0.4595228481619378
+    },
+    {
+      "start": 1009,
+      "stop": 1135,
+      "mode": "reversion",
+      "lookback": 126,
+      "training_sharpe": 0.6908267928050252
+    },
+    {
+      "start": 1135,
+      "stop": 1261,
+      "mode": "reversion",
+      "lookback": 63,
+      "training_sharpe": 0.2587406759668229
+    },
+    {
+      "start": 1261,
+      "stop": 1387,
+      "mode": "reversion",
+      "lookback": 63,
+      "training_sharpe": -0.06463562160474379
+    },
+    {
+      "start": 1387,
+      "stop": 1513,
+      "mode": "momentum",
+      "lookback": 126,
+      "training_sharpe": -0.3289764807967899
+    },
+    {
+      "start": 1513,
+      "stop": 1639,
+      "mode": "momentum",
+      "lookback": 126,
+      "training_sharpe": -0.5794941621992135
+    },
+    {
+      "start": 1639,
+      "stop": 1765,
+      "mode": "trend",
+      "lookback": 126,
+      "training_sharpe": 0.07254063225520503
+    },
+    {
+      "start": 1765,
+      "stop": 1800,
+      "mode": "momentum",
+      "lookback": 126,
+      "training_sharpe": 0.4450448095379136
+    }
+  ],
+  "cost_sensitivity": [
+    {
+      "cost_bps": 0,
+      "observations": 1295,
+      "total_return": 0.18415944648316485,
+      "cagr": 0.033439899506647164,
+      "sharpe_zero_rf": 0.3499911062599097,
+      "max_drawdown": -0.21534007924790566
+    },
+    {
+      "cost_bps": 5,
+      "observations": 1295,
+      "total_return": 0.12124463648542294,
+      "cagr": 0.02251909040923583,
+      "sharpe_zero_rf": 0.25500358577918253,
+      "max_drawdown": -0.23635724883177822
+    },
+    {
+      "cost_bps": 10,
+      "observations": 1295,
+      "total_return": 0.061659301115671195,
+      "cagr": 0.011711236338192599,
+      "sharpe_zero_rf": 0.15999244654554476,
+      "max_drawdown": -0.2568161076299451
+    },
+    {
+      "cost_bps": 25,
+      "observations": 1295,
+      "total_return": -0.09882925459519964,
+      "cagr": -0.020045970595325535,
+      "sharpe_zero_rf": -0.12473351198117677,
+      "max_drawdown": -0.3223079211982961
+    },
+    {
+      "cost_bps": 50,
+      "observations": 1295,
+      "total_return": -0.31440350520344806,
+      "cagr": -0.07082004252531438,
+      "sharpe_zero_rf": -0.5955963800854001,
+      "max_drawdown": -0.46487926988394224
+    }
+  ],
+  "assumptions": {
+    "train_observations": 504,
+    "test_observations": 126,
+    "candidate_rules": 9,
+    "vol_target": 0.12,
+    "cost_bps_per_turnover": 10,
+    "cash_rate": 0,
+    "long_only": true,
+    "max_gross": 1,
+    "signal_lag": "t-2 information, close t-1 execution, t return"
+  },
+  "limitations": [
+    "Retrospective pseudo-OOS, not an unseen live experiment",
+    "Fixed present-day survivor universe; selection bias",
+    "Adjusted close execution proxy, no actual fill, impact, taxes or capacity",
+    "Conditional bootstrap does not correct research-selection bias",
+    "No guarantee of positive performance"
+  ]
+}
