@@ -1,0 +1,46 @@
+{
+  "source": {
+    "name": "Seeded synthetic geometric prices",
+    "url": "https://github.com/Anjaney336/systematic-strategy-research/blob/main/execution_bridge.py",
+    "access_date": "2026-10-24",
+    "seed": 20261024
+  },
+  "scenarios": [
+    {
+      "depth_units": 25,
+      "return_after_terminal_cost": 0.026833328883421492,
+      "filled_units": 28173,
+      "requested_units": 2564498,
+      "unit_fill_ratio": 0.010985775773660186,
+      "terminal_cost": 844.3055720744983
+    },
+    {
+      "depth_units": 100,
+      "return_after_terminal_cost": 0.011695598460462087,
+      "filled_units": 94553,
+      "requested_units": 1968574,
+      "unit_fill_ratio": 0.04803121447301448,
+      "terminal_cost": 1435.6150610925815
+    },
+    {
+      "depth_units": 1000,
+      "return_after_terminal_cost": -0.007474698483017517,
+      "filled_units": 331243,
+      "requested_units": 884280,
+      "unit_fill_ratio": 0.374590627403085,
+      "terminal_cost": 1239.9326700842616
+    }
+  ],
+  "folds": 4,
+  "assumptions": {
+    "fee_bps": 10,
+    "half_spread_bps": 5,
+    "depth_units": [
+      25,
+      100,
+      1000
+    ],
+    "capital": 1000000
+  },
+  "limits": "Synthetic displayed depth, adjusted-close marks, tick rounding and terminal auction capacity. No market impact, latency, empirically observed order book, taxes or trading-size feasibility. Curves are pre-liquidation; reported returns include final liquidation."
+}
